@@ -28,16 +28,21 @@
                 <input
                 type="text"
                 class="add-todo"
-                placeholder="Inserisci un elemento.">
-                <button>Aggiungi</button>
+                placeholder="Inserisci un elemento."
+                v-model = "newTodo"
+                @keyup.enter = "addTodo"
+                ref = "todoInput"
+                >
+                <button @click = "addTodo">Aggiungi</button>
             </section>
             
-             <ul class="todos">
-                <li>
-                    <span class="text">test test test</span>
+             <ul class="todos" v-if = "todos.length > 0"> 
+                <li v-for ="(todo, index) in todos">
+                    <span class="text">{{todo.text}}</span>
                     <i class="fas fa-trash-alt"></i>
                 </li>
              </ul>
+             <h2 v-else>Non ci sono Todos</h2>
         </main>
     </div>
 <!-- link js -->
