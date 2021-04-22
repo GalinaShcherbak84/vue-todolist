@@ -35,5 +35,9 @@ const app = new Vue({
             console.log(index);
             this.todos.splice(index, 1)
         },
+        //update todo completed status
+        updateStatus(index){
+            this.todos[index].completed = !this.todos[index].completed
+        }
     },
 });
