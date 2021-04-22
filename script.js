@@ -31,5 +31,9 @@ const app = new Vue({
             }
         },
         /* remove todo */
+        removeTodo(index){
+            console.log(index);
+            this.todos.splice(index, 1)
+        },
     },
 });
