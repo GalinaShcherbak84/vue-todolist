@@ -29,7 +29,7 @@
                 type="text"
                 class="add-todo"
                 placeholder="Inserisci un elemento."
-                v-model = "newTodo"
+                v-model.trim = "newTodo"
                 @keyup.enter = "addTodo"
                 ref = "todoInput"
                 >

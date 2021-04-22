@@ -82,3 +82,20 @@ h2  {
 .todos li span.completed{
     text-decoration: line-through;
 }
+.todos .text{
+    position: relative;
+    padding-left: 25px;
+}
+.todos .text::before{
+    content:'';
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border:solid 1px white;
+}
+.todos li span.completed::before{
+    background-color: white;
+}
